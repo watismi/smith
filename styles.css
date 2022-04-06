@@ -1,0 +1,1484 @@
+/* Subhead */
+
+h2 span {
+    display: block;
+    color: #d35224;
+    font-size: 48px;
+}
+
+/* TOC */
+
+#toc {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-count: 3;
+    gap: 15px;
+    margin: 0 auto 2em;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    align-content: space-evenly;
+}
+
+
+#toc li {
+    list-style: none;
+    width: 31%;
+    flex: 1 1 auto;
+    min-height: 142px;
+    -webkit-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+    box-sizing: border-box;
+    min-width: 190px;
+}
+
+.toc-link {
+	font-family: 'Macklin sans w01',Arial,sans-serif;
+    color: #32322e;
+    border: solid 2px #32322e;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 20px;
+    display: block;
+    line-height: 1.4;
+    height: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.toc-link span {
+    font-family: 'Macklin text w01','Times New Roman',sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #d35224;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+
+.toc-link:hover, .toc-link:focus {
+    background-color: #d35224;
+    border-color: #d35224;
+}
+
+.toc-link:hover, 
+.toc-link:focus,
+.toc-link:hover span, 
+.toc-link:focus span {
+    color: #fff;
+}
+
+#toc li:last-child {
+    flex: 0 0 auto;
+    width: 190px;
+}
+
+@media screen and (max-width: 600px) {
+   #toc li {
+        min-width: 140px;
+    }
+    #toc li:last-child {
+        width: calc(50% - 7.5px);
+    }
+}
+
+/* Stats */
+
+.ss-stat-block .accent-image {
+    position: absolute!important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.ss-stat-block {
+    font-family: 'Macklin sans w01',Arial,sans-serif;
+    background-color: #f5f0e7;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.ss-stat-block p {
+}
+
+.ss-grid-container .ss-stat {
+    font-family: 'Macklin sans w01',Arial,sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #32322e;
+    margin-bottom: 0;
+    z-index: 0;
+    padding: 14px 20px 20px!important;
+    font-weight: 300;
+}
+
+.ss-bold-stat {
+    color: #32322e;
+    font-weight: 700!important
+}
+
+.ss-stat-block a.ss-source {
+    display: block;
+    padding: 0 20px 20px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #857c77;
+    position: relative;
+    z-index: 3;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 100%;
+    text-decoration: none
+}
+
+/* Alt Color Medium */
+
+.ss-stat-block.color-medium {
+    background-color: #f4d35e;
+}
+
+.ss-stat-block.color-medium p.ss-stat {
+    color: #32322e;
+}
+
+.ss-stat-block.color-medium .ss-bold-stat {
+    color: #32322e;
+    font-weight: 700!important;
+}
+
+.ss-stat-block.color-medium a.ss-source {
+    color: #d35224;
+}
+
+/* Alt Color Dark */
+
+.ss-stat-block.color-dark {
+    background-color: #d35224;
+}
+
+.ss-stat-block.color-dark p.ss-stat {
+    color: #f5f0e7;
+}
+
+.ss-stat-block.color-dark .ss-bold-stat {
+    color: #f5f0e7;
+    font-weight: 700!important
+}
+
+.ss-stat-block.color-dark a.ss-source {
+    color: #32322e;
+}
+
+/* NEW Share & Copy Links */
+
+button.stat-twitter-icon,
+button.stat-clipboard-icon {
+  display: flex;
+  background: transparent;
+  padding: 5px;
+  border: 0;
+}
+
+.stat-share-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 5px;
+    right: 0;
+    padding: 18px 10px 0;
+    z-index: 3;
+}
+
+.stat-twitter-icon svg.twitter-icon {
+  width: 25.7px;
+  height: 20.92px;
+  overflow: visible;
+}
+.stat-clipboard-icon svg.clipboard-icon {
+  width: 16.02px;
+  height: 19.12px;
+  overflow: visible;
+}
+
+.stat-share-container svg {
+	pointer-events: none;
+}
+
+button.stat-twitter-icon:focus,button.stat-twitter-icon:hover,
+button.stat-clipboard-icon:focus,button.stat-clipboard-icon:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    cursor: pointer
+}
+
+.color-light svg.twitter-icon {
+	fill: #d35224;
+}
+
+.color-medium svg.twitter-icon {
+	fill: #32322e;
+}
+
+.color-dark svg.twitter-icon {
+	fill: #f5f0e7;
+}
+
+svg.clipboard-icon {
+    stroke-width: 1.5px;
+    stroke-linecap: round;
+}
+
+.color-light svg.clipboard-icon {
+    fill: #f5f0e7;
+    stroke: #d35224;
+    stroke-width: 1.5px;
+    stroke-linecap: round;
+}
+
+.color-medium svg.clipboard-icon  {
+    fill: #f4d35e;
+    stroke: #32322e;
+}
+.color-dark svg.clipboard-icon  {
+    fill: #d35224;
+    stroke: #f5f0e7;
+}
+
+/* Grid */
+
+.ss-grid-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.ss-grid-container [class^=ss-grid-] {
+    display: grid;
+    grid-template-columns: repeat(6,87.5px);
+    grid-template-rows: repeat(5,117.5px);
+    grid-auto-flow: row;
+    gap: 15px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ss-grid-container .ss-grid-4a {
+    grid-template-rows: repeat(3,117.5px);
+    grid-template-areas: 
+    "one one two two two two" 
+    "one one three three three three" 
+    "four four four four four four"
+}
+
+.ss-grid-container .ss-grid-4a .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-4a .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-4a .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-4a .ss-stat-block:nth-child(4) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-4b {
+    grid-template-rows: repeat(4,117.5px);
+    grid-template-areas: 
+    "one one one two two two" 
+    "one one one two two two" 
+    "three three three four four four" 
+    "three three three four four four"
+}
+
+.ss-grid-container .ss-grid-4b .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-4b .ss-stat-block:nth-child(2) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-4b .ss-stat-block:nth-child(3) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-4b .ss-stat-block:nth-child(4) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-5a {
+    grid-template-rows: repeat(4,117.5px);
+    grid-template-areas: 
+    "one one one one three three" 
+    "two two two two three three" 
+    "four four four four five five" 
+    "four four four four five five"
+}
+
+.ss-grid-container .ss-grid-5a .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-5a .ss-stat-block:nth-child(2) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-5a .ss-stat-block:nth-child(3) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-5a .ss-stat-block:nth-child(4) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-5a .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-5b {
+    grid-template-rows: repeat(4,117.5px);
+    grid-template-areas: 
+    "one one two two three three" 
+    "one one two two three three" 
+    "four four five five five five" 
+    "four four five five five five" 
+}
+
+.ss-grid-container .ss-grid-5b .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-5b .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-5b .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-5b .ss-stat-block:nth-child(4) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-5b .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-5c {
+    grid-template-rows: repeat(4,117.5px);
+    grid-template-areas: 
+    "one one one one one one" 
+    "two two two three three three" 
+    "two two two three three three" 
+    "four four five five five five" 
+    "four four five five five five"
+}
+
+.ss-grid-container .ss-grid-5c .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-5c .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-5c .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-5c .ss-stat-block:nth-child(4) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-5c .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-6a {
+    grid-template-rows: repeat(5,117.5px);
+    grid-template-areas: 
+    "one one two two three three" 
+    "one one two two three three" 
+    "four four five five five five" 
+    "four four five five five five" 
+    "six six six six six six"
+}
+
+.ss-grid-container .ss-grid-6a .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-6a .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-6a .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-6a .ss-stat-block:nth-child(4) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-6a .ss-stat-block:nth-child(5) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-6a .ss-stat-block:nth-child(6) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-6b {
+    grid-template-rows: repeat(6,117.5px);
+    grid-template-areas: 
+    "one one one one two two" 
+    "one one one one two two" 
+    "three three three four four four" 
+    "three three three four four four" 
+    "five five six six six six" 
+    "five five six six six six"
+}
+
+.ss-grid-container .ss-grid-6b .ss-stat-block:first-child {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-6b .ss-stat-block:nth-child(2) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-6b .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-6b .ss-stat-block:nth-child(4) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-6b .ss-stat-block:nth-child(5) {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-6b .ss-stat-block:nth-child(6) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-6c {
+    grid-template-rows: repeat(6,117.5px);
+    grid-template-areas: 
+    "one one one one two two" 
+    "one one one one two two" 
+    "three three four four four four" 
+    "three three four four four four" 
+    "five five five five six six" 
+    "five five five five six six"
+}
+
+.ss-grid-container .ss-grid-6c .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-6c .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-6c .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-6c .ss-stat-block:nth-child(4) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-6c .ss-stat-block:nth-child(5) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-6c .ss-stat-block:nth-child(6) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-6d {
+    grid-template-rows: repeat(6,117.5px);
+    grid-template-areas: 
+    "one one two two two two" 
+    "one one two two two two" 
+    "three three three three three three" 
+    "four four four four five five" 
+    "four four four four five five"
+    "six six six six six six" 
+}
+
+.ss-grid-container .ss-grid-6d .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-6d .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-6d .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-6d .ss-stat-block:nth-child(4) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-6d .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-6d .ss-stat-block:nth-child(6) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-7a {
+    grid-template-rows: repeat(6,117.5px);
+    grid-template-areas: 
+    "one one one one two two" 
+    "one one one one two two" 
+    "three three three four four four" 
+    "three three three four four four" 
+    "five five six six six six" 
+    "five five six six six six"
+    "seven seven seven seven seven seven"
+}
+
+.ss-grid-container .ss-grid-7a .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-7a .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-7a .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-7a .ss-stat-block:nth-child(4) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-7a .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-7a .ss-stat-block:nth-child(6) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-7a .ss-stat-block:nth-child(7) {
+    grid-area: seven
+}
+
+.ss-grid-container .ss-grid-7b {
+    grid-template-rows: repeat(3,117.5px);
+    grid-template-areas: 
+    "one one two two two two" 
+    "one one three three three three" 
+    "four four four four four four"
+    "five five six six seven seven"
+    "five five six six seven seven"
+}
+
+.ss-grid-container .ss-grid-7b .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-7b .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-7b .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-7b .ss-stat-block:nth-child(4) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-7b .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-7b .ss-stat-block:nth-child(6) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-7b .ss-stat-block:nth-child(7) {
+    grid-area: seven
+}
+
+.ss-grid-container .ss-grid-7c {
+    grid-template-rows: repeat(8,117.5px);
+        grid-template-areas: 
+    "one one two two two two"
+    "one one two two two two"
+    "three three two two two two"
+    "three three two two two two"
+    "four four five five six six"
+    "four four five five six six"
+    "seven seven seven seven six six"
+    "seven seven seven seven six six"; 
+}
+
+.ss-grid-container .ss-grid-7c .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-7c .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-7c .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-7c .ss-stat-block:nth-child(4) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-7c .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-7c .ss-stat-block:nth-child(6) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-7c .ss-stat-block:nth-child(7) {
+    grid-area: seven
+}
+
+.ss-grid-container .ss-grid-8a {
+    grid-template-rows: repeat(7,117.5px);
+    grid-template-areas: 
+    "one one two two three three" 
+    "one one two two three three" 
+    "four four four four five five" 
+    "four four four four five five" 
+    "six six six six six six" 
+    "seven seven seven eight eight eight" 
+    "seven seven seven eight eight eight"
+}
+
+.ss-grid-container .ss-grid-8a .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-8a .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-8a .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-8a .ss-stat-block:nth-child(4) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-8a .ss-stat-block:nth-child(5) {
+    grid-area: seven
+}
+
+.ss-grid-container .ss-grid-8a .ss-stat-block:nth-child(6) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-8a .ss-stat-block:nth-child(7) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-8a .ss-stat-block:nth-child(8) {
+    grid-area: eight
+}
+
+.ss-grid-container .ss-grid-8b {
+    grid-template-rows: repeat(7,117.5px);
+    grid-template-areas: 
+    "one one two two two two" 
+    "one one four four four four" 
+    "three three four four four four" 
+    "three three five five five five" 
+    "six six six six six six" 
+    "seven seven seven seven eight eight" 
+    "seven seven seven seven eight eight"
+}
+
+.ss-grid-container .ss-grid-8b .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-8b .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-8b .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-8b .ss-stat-block:nth-child(4) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-8b .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-8b .ss-stat-block:nth-child(6) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-8b .ss-stat-block:nth-child(7) {
+    grid-area: seven
+}
+
+.ss-grid-container .ss-grid-8b .ss-stat-block:nth-child(8) {
+    grid-area: eight
+}
+
+.ss-grid-container .ss-grid-8c {
+    grid-template-rows: repeat(8,117.5px);
+    grid-template-areas: 
+    "one one one one two two"
+    "one one one one two two"
+    "three three four four five five"
+    "three three four four five five"
+    "six six six six seven seven"
+    "six six six six seven seven"
+    "six six six six eight eight"
+    "six six six six eight eight"; 
+}
+
+.ss-grid-container .ss-grid-8c .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-8c .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-8c .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-8c .ss-stat-block:nth-child(4) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-8c .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-8c .ss-stat-block:nth-child(6) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-8c .ss-stat-block:nth-child(7) {
+    grid-area: seven
+}
+
+.ss-grid-container .ss-grid-8c .ss-stat-block:nth-child(8) {
+    grid-area: eight
+}
+
+.ss-grid-container .ss-grid-8d {
+    grid-template-rows: repeat(8,117.5px);
+       grid-template-areas: 
+    "one one one one two two"
+    "one one one one two two"
+    "three three four four five five"
+    "three three four four five five"
+    "six six seven seven seven seven"
+    "six six seven seven seven seven"
+    "eight eight seven seven seven seven"
+    "eight eight seven seven seven seven"; 
+}
+
+.ss-grid-container .ss-grid-8d .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-8d .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-8d .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-8d .ss-stat-block:nth-child(4) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-8d .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-8d .ss-stat-block:nth-child(6) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-8d .ss-stat-block:nth-child(7) {
+    grid-area: seven
+}
+
+.ss-grid-container .ss-grid-8d .ss-stat-block:nth-child(8) {
+    grid-area: eight
+}
+
+.ss-grid-container .ss-grid-8e {
+    grid-template-rows: repeat(10,117.5px);
+            grid-template-areas: 
+    "one one two two two two"
+    "one one two two two two"
+    "three three two two two two"
+    "three three two two two two"
+    "four four four four five five"
+    "four four four four five five"
+    "six six seven seven five five"
+    "six six seven seven five five"
+    "eight eight eight eight eight eight"
+    "eight eight eight eight eight eight"; 
+}
+
+.ss-grid-container .ss-grid-8e .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-8e .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-8e .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-8e .ss-stat-block:nth-child(4) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-8e .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-8e .ss-stat-block:nth-child(6) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-8e .ss-stat-block:nth-child(7) {
+    grid-area: seven
+}
+
+.ss-grid-container .ss-grid-8e .ss-stat-block:nth-child(8) {
+    grid-area: eight
+}
+
+.ss-grid-container .ss-grid-10a {
+    grid-template-rows: repeat(9,117.5px);
+    grid-template-areas: 
+    "one one two two three three" 
+    "one one two two three three" 
+    "four four five five five five" 
+    "four four five five five five" 
+    "six six six six six six" 
+    "seven seven seven eight eight eight" 
+    "seven seven seven eight eight eight" 
+    "nine nine ten ten ten ten" "nine nine ten ten ten ten"
+}
+
+.ss-grid-container .ss-grid-10a .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-10a .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-10a .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-10a .ss-stat-block:nth-child(4) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-10a .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-10a .ss-stat-block:nth-child(6) {
+    grid-area: ten
+}
+
+.ss-grid-container .ss-grid-10a .ss-stat-block:nth-child(7) {
+    grid-area: eight
+}
+
+.ss-grid-container .ss-grid-10a .ss-stat-block:nth-child(8) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-10a .ss-stat-block:nth-child(9) {
+    grid-area: seven
+}
+
+.ss-grid-container .ss-grid-10a .ss-stat-block:nth-child(10) {
+    grid-area: nine
+}
+
+.ss-grid-container .ss-grid-11a {
+    grid-template-rows: repeat(9,117.5px);
+        grid-template-areas: 
+    "one one one one two two" 
+    "three three three three two two" 
+    "four four five five five five" 
+    "four four five five five five" 
+    "six six six six six six" 
+    "seven seven seven eight eight eight" 
+    "seven seven seven eight eight eight" 
+    "nine nine ten ten eleven eleven" 
+    "nine nine ten ten eleven eleven"
+}
+
+.ss-grid-container .ss-grid-11a .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-11a .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-11a .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-11a .ss-stat-block:nth-child(4) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-11a .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-11a .ss-stat-block:nth-child(6) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-11a .ss-stat-block:nth-child(7) {
+    grid-area: seven
+}
+
+.ss-grid-container .ss-grid-11a .ss-stat-block:nth-child(8) {
+    grid-area: eight
+}
+
+.ss-grid-container .ss-grid-11a .ss-stat-block:nth-child(9) {
+    grid-area: nine
+}
+
+.ss-grid-container .ss-grid-11a .ss-stat-block:nth-child(10) {
+    grid-area: ten
+}
+
+.ss-grid-container .ss-grid-11a .ss-stat-block:nth-child(11) {
+    grid-area: eleven
+}
+
+.ss-grid-container .ss-grid-11b {
+    grid-template-rows: repeat(10,117.5px);
+    grid-template-areas: 
+    "one one two two three three"
+    "one one two two three three"
+    "four four four four five five"
+    "four four four four five five"
+    "six six seven seven eight eight"
+    "six six seven seven eight eight"
+    "nine nine nine nine nine nine"
+    "nine nine nine nine nine nine"
+    "ten ten ten ten eleven eleven"
+    "ten ten ten ten eleven eleven"; 
+}
+
+.ss-grid-container .ss-grid-11b .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-11b .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-11b .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-11b .ss-stat-block:nth-child(4) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-11b .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-11b .ss-stat-block:nth-child(6) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-11b .ss-stat-block:nth-child(7) {
+    grid-area: seven
+}
+
+.ss-grid-container .ss-grid-11b .ss-stat-block:nth-child(8) {
+    grid-area: eight
+}
+
+.ss-grid-container .ss-grid-11b .ss-stat-block:nth-child(9) {
+    grid-area: nine
+}
+
+.ss-grid-container .ss-grid-11b .ss-stat-block:nth-child(10) {
+    grid-area: ten
+}
+
+.ss-grid-container .ss-grid-11b .ss-stat-block:nth-child(11) {
+    grid-area: eleven
+}
+
+.ss-grid-container .ss-grid-12a {
+    grid-template-rows: repeat(12,117.5px);
+    grid-template-areas:
+        "one one two two three three"
+        "one one two two three three"
+        "four four five five five five"
+        "four four five five five five"
+        "six six six six seven seven"
+        "six six six six seven seven"
+        "eight eight eight eight nine nine"
+        "eight eight eight eight nine nine"
+        "eight eight eight eight nine nine"
+        "eight eight eight eight nine nine"
+        "ten ten eleven eleven twelve twelve"
+        "ten ten eleven eleven twelve twelve"
+}
+
+.ss-grid-container .ss-grid-12a .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-12a .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-12a .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-12a .ss-stat-block:nth-child(4) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-12a .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-12a .ss-stat-block:nth-child(6) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-12a .ss-stat-block:nth-child(7) {
+    grid-area: seven
+}
+
+.ss-grid-container .ss-grid-12a .ss-stat-block:nth-child(8) {
+    grid-area: eight
+}
+
+.ss-grid-container .ss-grid-12a .ss-stat-block:nth-child(9) {
+    grid-area: nine
+}
+
+.ss-grid-container .ss-grid-12a .ss-stat-block:nth-child(10) {
+    grid-area: ten
+}
+
+.ss-grid-container .ss-grid-12a .ss-stat-block:nth-child(11) {
+  grid-area: eleven
+}
+
+.ss-grid-container .ss-grid-12a .ss-stat-block:nth-child(12) {
+    grid-area: twelve
+}
+
+.ss-grid-container .ss-grid-12b {
+    grid-template-rows: repeat(12,117.5px);
+       grid-template-areas: 
+    "one one one one two two"
+    "one one one one two two"
+    "three three four four two two"
+    "three three four four two two"
+    "five five five five six six"
+    "five five five five six six"
+    "seven seven eight eight eight eight"
+    "seven seven eight eight eight eight"
+    "nine nine eight eight eight eight"
+    "nine nine eight eight eight eight"
+    "ten ten eleven eleven twelve twelve"
+    "ten ten eleven eleven twelve twelve"; 
+}
+
+.ss-grid-container .ss-grid-12b .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-12b .ss-stat-block:nth-child(2) {
+    grid-area: two
+}
+
+.ss-grid-container .ss-grid-12b .ss-stat-block:nth-child(3) {
+    grid-area: three
+}
+
+.ss-grid-container .ss-grid-12b .ss-stat-block:nth-child(4) {
+    grid-area: four
+}
+
+.ss-grid-container .ss-grid-12b .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-12b .ss-stat-block:nth-child(6) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-12b .ss-stat-block:nth-child(7) {
+   grid-area: seven
+}
+
+.ss-grid-container .ss-grid-12b .ss-stat-block:nth-child(8) {
+    grid-area: eight
+}
+
+.ss-grid-container .ss-grid-12b .ss-stat-block:nth-child(9) {
+    grid-area: nine
+}
+
+.ss-grid-container .ss-grid-12b .ss-stat-block:nth-child(10) {
+   grid-area: ten
+}
+
+.ss-grid-container .ss-grid-12b .ss-stat-block:nth-child(11) {
+    grid-area: eleven
+}
+
+.ss-grid-container .ss-grid-12b .ss-stat-block:nth-child(12) {
+    grid-area: twelve
+}
+
+.ss-grid-container .ss-grid-12c {
+    grid-template-rows: repeat(12,117.5px);
+       grid-template-areas: 
+    "one one two two three three"
+    "one one two two three three"
+    "four four four four five five"
+    "four four four four five five"
+    "six six seven seven eight eight"
+    "six six seven seven eight eight"
+    "six six nine nine nine nine"
+    "six six nine nine nine nine"
+    "ten ten ten ten eleven eleven"
+    "ten ten ten ten eleven eleven"
+    "ten ten ten ten twelve twelve"
+    "ten ten ten ten twelve twelve";
+}
+
+.ss-grid-container .ss-grid-12c .ss-stat-block:first-child {
+    grid-area: one
+}
+
+.ss-grid-container .ss-grid-12c .ss-stat-block:nth-child(2) {
+   grid-area: two
+}
+
+.ss-grid-container .ss-grid-12c .ss-stat-block:nth-child(3) {
+   grid-area: three
+}
+
+.ss-grid-container .ss-grid-12c .ss-stat-block:nth-child(4) {
+	grid-area: four
+}
+
+.ss-grid-container .ss-grid-12c .ss-stat-block:nth-child(5) {
+    grid-area: five
+}
+
+.ss-grid-container .ss-grid-12c .ss-stat-block:nth-child(6) {
+    grid-area: six
+}
+
+.ss-grid-container .ss-grid-12c .ss-stat-block:nth-child(7) {
+    grid-area: seven
+}
+
+.ss-grid-container .ss-grid-12c .ss-stat-block:nth-child(8) {
+    grid-area: eight
+}
+
+.ss-grid-container .ss-grid-12c .ss-stat-block:nth-child(9) {
+    grid-area: nine
+}
+
+.ss-grid-container .ss-grid-12c .ss-stat-block:nth-child(10) {
+    grid-area: ten
+}
+
+.ss-grid-container .ss-grid-12c .ss-stat-block:nth-child(11) {
+    grid-area: eleven
+}
+
+.ss-grid-container .ss-grid-12c .ss-stat-block:nth-child(12) {
+    grid-area: twelve
+}
+
+@media (max-width: 768px) {
+    .ss-grid-container {
+        display:block;
+        width: 100%;
+    }
+
+    .ss-grid-container [class^=ss-grid-] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+
+    .ss-stat-block {
+        width: 100%;
+        min-height: 250px;
+    }
+}
+
+
+
+/* Stat Specific Styling */
+
+/* Stat Specific Styling */
+
+.ss-1-stat-5 p.ss-stat {
+    margin-right: 160px;
+}
+
+.ss-1-stat-5 .stat-share-container {
+    left: 0;
+}
+
+img.accent-image.img-stat5 {
+    margin: 0;
+    left: auto;
+    right: 15px;
+    bottom: 15px;
+}
+
+.ss-1-stat-8 p.ss-stat {
+    margin-right: 84px;
+}
+
+img.accent-image.img-stat8 {
+    margin: 0;
+    width: 78%;
+}
+
+img.accent-image.img-stat21 {
+    margin: 0;
+    left: auto;
+    right: 15%;
+}
+
+img.accent-image.img-stat24 {
+    margin: 0;
+    left: unset;
+    right: 15px;
+    bottom: 15px;
+}
+
+.ss-3-stat-24 .stat-share-container {
+    right: unset;
+}
+
+img.accent-image.img-stat39 {
+    bottom: 15px;
+}
+
+.ss-5-stat-47 .stat-share-container {
+    right: unset;
+}
+
+img.accent-image.img-stat47 {
+    bottom: 15px;
+    left: unset;
+    right: 15px;
+}
+
+.ss-5-stat-52 .stat-share-container {
+    right: unset;
+}
+
+img.accent-image.img-stat52 {
+    left: unset;
+    right: 25px;
+    bottom: 15px;
+}
+
+img.accent-image.img-stat53 {
+    bottom: 15px;
+    left: 15px;
+}
+
+.ss-6-stat-56 .stat-share-container {
+    right: unset;
+}
+
+p.ss-stat {}
+
+.ss-6-stat-56 p.ss-stat {
+    margin-right: 136px;
+}
+
+img.accent-image.img-stat56 {
+    left: unset;
+    bottom: 15px;
+    right: 15px;
+}
+
+img.accent-image.img-stat65 {
+    bottom: 15px;
+}
+
+.ss-7-stat-70 .stat-share-container {
+    right: unset;
+}
+
+img.accent-image.img-stat70 {
+    bottom: 15px;
+    left: unset;
+    right: 15px;
+}
+
+.ss-7-stat-71 p.ss-stat {
+    margin-right: 250px;
+}
+
+.ss-7-stat-71 .stat-share-container {
+    right: unset;
+}
+
+.ss-7-stat-71 img.accent-image {
+    left: unset;
+    right: 15px;
+}
+
+.ss-4-stat-42 p.ss-stat {
+    padding-bottom: 5px !important;
+}
+
+.ss-2-stat-16 p.ss-stat {
+    margin-right: 90px;
+}
+
+img.accent-image.img-stat32 {bottom: 20px;}
+
+.ss-4-stat-39 p.ss-stat {
+    margin-right: 90px;
+}
+
+.ss-5-stat-47 p.ss-stat {margin-right: 50px;}
+
+.ss-6-stat-62  p.ss-stat {
+    margin-right: 50px;
+}
+
+img.accent-image.img-stat62 {
+    bottom: 25px;
+}
+
+@media screen and (max-width: 767px) {
+    .ss-1-stat-5 p.ss-stat {
+        margin-right: 120px;
+    }
+    .ss-1-stat-8 p.ss-stat {
+        margin-right: 0;
+    }
+    
+    img.accent-image.img-stat8 {
+        margin: 0;
+        width: 40%;
+    }
+    .ss-1-stat-8 a.ss-source {
+        margin-left: 130px;
+    }
+    .ss-2-stat-16 p.ss-stat {
+        margin-right: 0;
+    }
+    img.accent-image.img-stat16 {
+        width: 65%;
+    }
+    img.accent-image.img-stat21 {
+        width: 60%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    img.accent-image.img-stat29 {
+        width: 36%;
+    }
+    .ss-4-stat-39 p.ss-stat {
+        margin-right: 0;
+    }
+    img.accent-image.img-stat39 {
+        width: 45%;
+        bottom: 0
+    }
+    img.accent-image.img-stat47 {
+        width: 70%;
+    }
+    img.accent-image.img-stat53 {
+        bottom: 0;
+        width: 40%;
+    }
+    img.accent-image.img-stat62 {
+        width: 45%;
+        bottom: 5px;
+        left: 20%;
+    }
+    img.accent-image.img-stat65 {
+        bottom: 0;
+        width: 40%;
+    }
+    .ss-7-stat-71 p.ss-stat {
+        margin-right: 0;
+    }
+    .ss-7-stat-71 img.accent-image {
+        width: 50%;
+    }
+}
